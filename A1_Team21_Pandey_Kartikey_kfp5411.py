@@ -11,6 +11,11 @@
 #Create a function that, given a list of unknown size, returns its most repeated element and its least repeated element 
 #as a list of the two elements in that order. Assign the returned list to a variable and then print the variable on another line. 
 #You can test the function by giving it [ 10, 30, 60, 88, 10, 30, 10, 60, 3, 88 ], the returned list for which should be [ 10, 3 ].
+def count_l(count,l,word):
+    for j in range(len(l)): 
+        if l[j] == word: 
+            count += 1
+    return count 
 
 def ml(l): 
     #Counting Max
@@ -22,9 +27,8 @@ def ml(l):
      
     for i in range(len(l)): 
         word = l[i]
-        for j in range(len(l)): 
-            if l[j] == word: 
-                count += 1
+
+        count = count_l(count,l,word)
 
         if count >= counter: 
             counter = count 
@@ -111,6 +115,6 @@ def main():
 
 
 #Call for main function
-#Fmain()
+main()
 
 
